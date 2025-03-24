@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("Hello, 世界")
+	fmt.Println(
+		ABC(1, 2),
+	)
+
+	_ = gin.Default()
+}
+
+func ABC(a, b int) int {
+	return a + b
 }
