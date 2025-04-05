@@ -1,19 +1,19 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/gin-gonic/gin"
+	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/widget"
 )
 
 func main() {
-	fmt.Println(
-		ABC(1, 2),
-	)
+	a := app.New()
+	w := a.NewWindow("Хер!")
+	label := widget.NewLabel("Пёрни в стакан!")
 
-	_ = gin.Default()
-}
+	w.SetContent(container.NewVBox(
+		label,
+	))
 
-func ABC(a, b int) int {
-	return a + b
+	w.ShowAndRun()
 }
